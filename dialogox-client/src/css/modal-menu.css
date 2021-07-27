@@ -7,7 +7,7 @@
 .modal.active{
 	opacity: 1;
 	height: auto;
-	z-index: 10;
+	z-index: 12;
     position: fixed;
     top: 0;
     left: 0;

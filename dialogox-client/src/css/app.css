@@ -45,6 +45,7 @@ html{
 	text-decoration:none;
 	margin: 0 10px;
 	color: rgba(0,0,0,.5);
+	cursor: pointer;
 }
 
 .link:hover{

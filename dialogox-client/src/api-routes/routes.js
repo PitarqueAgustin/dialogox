@@ -11,7 +11,8 @@ export const API = {
 	},
 	"Profile":{
 		"data": "http://localhost/dialogox/api-dialogox/Profile/data.php",
-		"getForName" : "http://localhost/dialogox/api-dialogox/Profile/getForName.php"
+		"getForName" : "http://localhost/dialogox/api-dialogox/Profile/getForName.php",
+		"edit" : "http://localhost/dialogox/api-dialogox/Profile/edit.php"
 	},
 	"Register":{
 		"register" : "http://localhost/dialogox/api-dialogox/Register/register.php"

@@ -26,3 +26,74 @@
 	flex-direction: column;
 	row-gap: 10px;
 }
+
+.profile--edit-link{
+	position:absolute;
+	top: 90%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.profile--modal-edit{
+	visibility: hidden;
+	opacity: 0;
+}
+
+.profile--modal-edit.active{
+	opacity: 1;
+	visibility: visible;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	background-color: rgba(0,0,0,.8);
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+}
+
+.cross-modal-profile{
+	opacity: 1;
+	color: #aa9;
+	font-size: 1.4em;
+	cursor: pointer;
+	transition: .2s transform;
+	margin: 0 10px;
+}
+
+.cross-modal-profile:hover{
+	transform: rotate(20deg);
+}
+
+.profile--modal-edit > form > div{
+	display: flex;
+	flex-direction: column;
+	margin: 5px 0;
+}
+
+.profile--modal-edit > form > div input,
+.profile--modal-edit > form > div button{
+	width: 80%;
+	padding: 5px 15px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,.6);
+	margin: auto;
+	outline: none;
+}
+
+.profile--modal-edit > form > div label{
+	text-align: center;
+	color: rgba(255,255,255,.6);
+}
+
+.profile--modal-edit > form > div button{
+	cursor: pointer;
+	margin-top: 10px;
+	transition: .2s transform;
+	cursor: pointer;
+	text-align: center;
+}
+
+.profile--modal-edit > form > div button:hover{
+	transform: scale(1.1);	
+}

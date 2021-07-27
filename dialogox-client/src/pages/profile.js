@@ -8,7 +8,7 @@ import '../css/profile.css';
 import Navbar from '../components/navbar';
 import ImageProfile from '../components/image-profile';
 import DescriptionProfile from '../components/description-profile';
-
+import BtnEditProfile from '../components/btn-edit-profile';
 
 export default function Profile(){
 	return(
@@ -16,6 +16,7 @@ export default function Profile(){
 			<Navbar />
 			<ImageProfile />
 			<DescriptionProfile />
+			<BtnEditProfile />
 		</div>
 	);
 }

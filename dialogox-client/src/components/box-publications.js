@@ -19,7 +19,6 @@ class BoxPublications extends Component{
 	async componentDidMount(){
 		await axios.get(API.Publications.getAll)
 		.then(response =>{
-			console.log(response.data)
 			this.setState({
 				data: response.data
 			})
