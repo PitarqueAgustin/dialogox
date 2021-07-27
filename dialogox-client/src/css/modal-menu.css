@@ -1,0 +1,66 @@
+.modal{
+	opacity: 0;
+	height: 0;
+	width: 30px;
+}
+
+.modal.active{
+	opacity: 1;
+	height: auto;
+	z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,.8);
+	padding: 10%;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+}
+
+.modal.active .menu{
+	height: 100%;
+}
+
+.modal.active .menu > ul{
+	opacity: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	list-style: none;
+	row-gap: 20px;
+}
+
+.modal.active .menu > ul li{
+	width: 50%;
+	text-align: center;
+	padding: 5px 15px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,.6);
+	cursor: pointer;
+	transition: .2s transform;
+}
+
+.modal.active .menu > ul li:hover{
+	transform: scale(1.1);
+}
+
+.modal.active .link-menu{
+	text-decoration: none;
+	color: #212121;
+}
+
+.modal.active .cross-modal{
+	opacity: 1;
+	color: #aa9;
+	font-size: 1.4em;
+	cursor: pointer;
+	transition: .2s transform;
+}
+
+.modal.active .cross-modal:hover{
+	transform: rotate(20deg);
+}

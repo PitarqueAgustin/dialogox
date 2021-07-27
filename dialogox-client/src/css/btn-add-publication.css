@@ -1,0 +1,32 @@
+.btn-add{
+	position: fixed;
+    top: 90%;
+    left: 88%;
+    border: 1px solid transparent;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 2px 10px #6d6d65;
+    opacity: .7;
+	color: #c941e2;
+	transition: .2s opacity,background-color;
+}
+
+.btn-add:hover{
+	opacity: 1;
+	background-color: rgba(255,255,255,.6);
+}
+
+.btn-add:active{
+	transform: scale(.9);
+	color:;
+}
+
+.alert-ok{
+	color: green;
+}
+
+.alert-err{
+	color: red;
+}
