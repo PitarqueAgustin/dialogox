@@ -7,7 +7,8 @@ import axios from 'axios';
 //Components
 import Publication from './publication';
 
-const API = 'http://localhost/dialogox/api-dialogox/Publications/publications.php';
+//Api-Routes
+import { API } from '../api-routes/routes';
 
 class BoxPublications extends Component{
 	
@@ -16,7 +17,7 @@ class BoxPublications extends Component{
 	}
 	
 	async componentDidMount(){
-		await axios.get(API)
+		await axios.get(API.Publications.getAll)
 		.then(response =>{
 			console.log(response.data)
 			this.setState({

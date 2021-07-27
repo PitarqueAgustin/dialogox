@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 
 import axios from 'axios';
 
-const API = 'http://localhost/dialogox/api-dialogox/Login/login.php';
+//Api-Routes
+import { API } from '../api-routes/routes';
 
 const storage = window.localStorage;
 
@@ -30,7 +31,7 @@ class FormLogin extends Component{
 		
 		const { user,pass } = this.state
 	
-		await axios.get(API+'?user='+user+'&pass='+pass)
+		await axios.get(API.Login.login+'?user='+user+'&pass='+pass)
 			.then(response => {
 				if(response.data.code == '10'){
 					storage.setItem('token',response.data.token);

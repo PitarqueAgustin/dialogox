@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 //Axios
 import axios from 'axios';
 
-const API = 'http://localhost/dialogox/api-dialogox/Publications/add.php';
+//Api-Routes
+import { API } from '../api-routes/routes';
 
 const token = window.localStorage.getItem('token');
 
@@ -26,7 +27,7 @@ class FormAddPublication extends Component{
 		
 		const { title, description, imageURL} = this.state;
 		
-		await axios.get(API+'?token='+token+'&title='+title+
+		await axios.get(API.Publications.add+'?token='+token+'&title='+title+
 						'&description='+description+'&imageurl='+imageURL)
 			.then(response => {
 				

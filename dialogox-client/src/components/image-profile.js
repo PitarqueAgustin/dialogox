@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 //axios
 import axios from 'axios';
 
-const API = "http://localhost/dialogox/api-dialogox/Profile/data.php";
+//Api-Routes
+import { API } from '../api-routes/routes';
 
 const token = window.localStorage.getItem('token');
 
@@ -15,7 +16,7 @@ class ImageProfile extends Component{
 	}
 	
 	componentDidMount = ()=>{
-		axios.get(API+'?token='+token)
+		axios.get(API.Profile.data+'?token='+token)
 			.then(response =>{
 				this.setState({
 					image: response.data.Imagen

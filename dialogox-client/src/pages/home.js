@@ -12,18 +12,19 @@ import Navbar from '../components/navbar';
 import Publications from '../components/box-publications';
 import BtnAddPublication from '../components/btn-add-publication';
 
+import { API } from '../api-routes/routes';
+
 export default function Home(){
 		
 	const token = window.localStorage.getItem('token');	
-		
-	const API = 'http://localhost/dialogox/api-dialogox/Login/auth.php';	
+			
 	
 	useEffect(() => {
 		_verifyToken();
 	});
 
 	function _verifyToken(){
-		 axios.get(API+'?token='+token)
+		 axios.get(API.Login.auth+'?token='+token)
 			.then(response => {
 				if(response.data.code != '10')
 					window.location = '/';

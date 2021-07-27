@@ -9,7 +9,8 @@ import {
 	FaHeart
 } from 'react-icons/fa';
 
-const API = 'http://localhost/dialogox/api-dialogox/Publications/like.php';
+//Api-Routes
+import { API } from '../api-routes/routes';
 
 const token = window.localStorage.getItem('token');
 
@@ -28,7 +29,7 @@ class BtnLike extends Component{
 	}
 	
 	_getState = async()=>{
-		await axios.get(API+'?get=0&token='+token+'&publicationid='+this.props.id)
+		await axios.get(API.Publications.like+'?get=0&token='+token+'&publicationid='+this.props.id)
 			.then(response => {
 				console.log(response.data)
 				if(response.data.Result == 'Ok'){
@@ -53,11 +54,11 @@ class BtnLike extends Component{
 		const {state} = this.state;
 		
 		if(state == 'like'){
-			await axios.get(API+'?del=0&token='+token+'&publicationid='+this.props.id)
+			await axios.get(API.Publications.like+'?del=0&token='+token+'&publicationid='+this.props.id)
 				.then(response => console.log(response.data))
 				.catch(err => console.error(err))
 		}else{
-			await axios.get(API+'?ins=0&token='+token+'&publicationid='+this.props.id)
+			await axios.get(API.Publications.like+'?ins=0&token='+token+'&publicationid='+this.props.id)
 				.then(response => console.log(response.data))
 				.catch(err => console.error(err))
 		}

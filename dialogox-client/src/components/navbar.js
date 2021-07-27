@@ -17,7 +17,8 @@ import BtnMenu from './btn-menu';
 //Router
 import { Link } from 'react-router-dom';
 
-const API = 'http://localhost/dialogox/api-dialogox/Profile/getForName.php';
+//Api-Routes
+import { API } from '../api-routes/routes';
 
 const TOKEN = window.localStorage.getItem('token');
 
@@ -31,7 +32,7 @@ class Navbar extends Component{
 		let box = document.querySelector('#box-profiles');		
 		if(e.target.value != ''){
 		
-			await axios.get(API+'?token='+TOKEN+'&text='+e.target.value)
+			await axios.get(API.Profile.getForName+'?token='+TOKEN+'&text='+e.target.value)
 				.then(response => {
 					console.log(response.data)
 					if(response.data.length > 0){

@@ -3,9 +3,12 @@ import React, { Component } from 'react';
 //Router
 import { Link } from 'react-router-dom';
 
+//axios
 import axios from 'axios';
 
-const API = 'http://localhost/dialogox/api-dialogox/Register/register.php';
+//Api-Routes
+import { API } from '../api-routes/routes';
+
 
 class FormRegister extends Component{
 	
@@ -23,7 +26,7 @@ class FormRegister extends Component{
 		
 		const { user, pass, rPass, name} = this.state;
 		
-		axios.get(API+'?user='+user+
+		axios.get(API.Register.register+'?user='+user+
 					  '&pass='+pass+
 					  '&rpass='+rPass+
 					  '&name='+name)

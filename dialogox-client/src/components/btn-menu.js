@@ -18,7 +18,8 @@ import {
 	Link
 } from 'react-router-dom';
 
-const API = 'http://localhost/dialogox/api-dialogox/Login/close.php';
+//Api-Routes
+import { API } from '../api-routes/routes';
 
 const TOKEN = window.localStorage.getItem('token');
 
@@ -35,7 +36,7 @@ class ModalMenu extends Component{
 	}
 	
 	_handleCloseSesion = ()=>{
-		axios.get(API+'?token='+TOKEN)
+		axios.get(API.Login.close+'?token='+TOKEN)
 			.then(response => console.log(response.data))
 			.catch(err => console.error(err))
 	}
