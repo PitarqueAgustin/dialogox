@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 //axios
 import axios from 'axios';
 
-const API = "http://localhost/api-dialogox/Profile/data.php";
+const API = "http://localhost/dialogox/api-dialogox/Profile/data.php";
 
 const token = window.localStorage.getItem('token');
 

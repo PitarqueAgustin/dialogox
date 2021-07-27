@@ -18,7 +18,7 @@ import {
 	Link
 } from 'react-router-dom';
 
-const API = 'http://localhost/api-dialogox/Login/close.php';
+const API = 'http://localhost/dialogox/api-dialogox/Login/close.php';
 
 const TOKEN = window.localStorage.getItem('token');
 

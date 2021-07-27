@@ -9,7 +9,7 @@ import {
 	FaHeart
 } from 'react-icons/fa';
 
-const API = 'http://localhost/api-dialogox/Publications/like.php';
+const API = 'http://localhost/dialogox/api-dialogox/Publications/like.php';
 
 const token = window.localStorage.getItem('token');
 

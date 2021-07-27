@@ -7,7 +7,7 @@ import axios from 'axios';
 //Components
 import Publication from './publication';
 
-const API = 'http://localhost/api-dialogox/Publications/publications.php';
+const API = 'http://localhost/dialogox/api-dialogox/Publications/publications.php';
 
 class BoxPublications extends Component{
 	

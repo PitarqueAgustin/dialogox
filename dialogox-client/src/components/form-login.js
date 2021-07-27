@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import axios from 'axios';
 
-const API = 'http://localhost/api-dialogox/Login/login.php';
+const API = 'http://localhost/dialogox/api-dialogox/Login/login.php';
 
 const storage = window.localStorage;
 

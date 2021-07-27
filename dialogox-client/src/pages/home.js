@@ -16,7 +16,7 @@ export default function Home(){
 		
 	const token = window.localStorage.getItem('token');	
 		
-	const API = 'http://localhost/api-dialogox/Login/auth.php';	
+	const API = 'http://localhost/dialogox/api-dialogox/Login/auth.php';	
 	
 	useEffect(() => {
 		_verifyToken();

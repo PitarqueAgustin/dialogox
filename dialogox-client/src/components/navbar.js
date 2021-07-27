@@ -17,7 +17,7 @@ import BtnMenu from './btn-menu';
 //Router
 import { Link } from 'react-router-dom';
 
-const API = 'http://localhost/api-dialogox/Profile/getForName.php';
+const API = 'http://localhost/dialogox/api-dialogox/Profile/getForName.php';
 
 const TOKEN = window.localStorage.getItem('token');
 
