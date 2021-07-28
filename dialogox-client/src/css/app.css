@@ -46,6 +46,10 @@ body > div{
 	font-size: .8em;
 }
 
+.mb-2{
+	margin-bottom: 5px;
+}
+
 .link{
 	text-decoration:none;
 	margin: 0 10px;

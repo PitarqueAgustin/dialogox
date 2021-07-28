@@ -78,7 +78,7 @@ class BtnEditProfile extends Component{
 					<FaRegWindowMinimize className="cross-modal-profile" onClick={this._handleModal}/>
 					<form onSubmit={this._handleSubmit}>
 						<div>
-							<label>Url Image</label>
+							<label>Url Imágen</label>
 							<input id="url-image" autocomplete="off" />
 						</div>
 						<div>

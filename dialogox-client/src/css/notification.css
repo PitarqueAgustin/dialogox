@@ -1,0 +1,19 @@
+.box--notifications{
+	padding: 5px 0;
+	display:flex;
+	flex-direction: column;
+}
+
+.box--notifications > div{
+	margin: 5px 0;
+	border: 1px solid #ccc;
+	height: 100px;
+	padding: 10px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.box--notifications > div img{
+	height: 100%;
+	object-fit: cover;
+}

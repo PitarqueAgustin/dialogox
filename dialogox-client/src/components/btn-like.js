@@ -31,7 +31,6 @@ class BtnLike extends Component{
 	_getState = async()=>{
 		await axios.get(API.Publications.like+'?get=0&token='+token+'&publicationid='+this.props.id)
 			.then(response => {
-				console.log(response.data)
 				if(response.data.Result == 'Ok'){
 					this.setState({
 						state: 'like' 
@@ -46,7 +45,6 @@ class BtnLike extends Component{
 			})
 			.catch(err => console.error(err))
 			
-			console.log(this.state.state)
 	}
 	
 	_handleLike = async()=>{
@@ -55,11 +53,11 @@ class BtnLike extends Component{
 		
 		if(state == 'like'){
 			await axios.get(API.Publications.like+'?del=0&token='+token+'&publicationid='+this.props.id)
-				.then(response => console.log(response.data))
+				.then(response => {})
 				.catch(err => console.error(err))
 		}else{
 			await axios.get(API.Publications.like+'?ins=0&token='+token+'&publicationid='+this.props.id)
-				.then(response => console.log(response.data))
+				.then(response => {})
 				.catch(err => console.error(err))
 		}
 		

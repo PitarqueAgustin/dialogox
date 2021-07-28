@@ -16,5 +16,8 @@ export const API = {
 	},
 	"Register":{
 		"register" : "http://localhost/dialogox/api-dialogox/Register/register.php"
+	},
+	"Notifications" :{
+		"getForToken" : "http://localhost/dialogox/api-dialogox/Notifications/getForToken.php"
 	}
 };

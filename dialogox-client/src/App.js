@@ -6,8 +6,7 @@ import './css/app.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
 import { createHashHistory } from 'history';
@@ -18,6 +17,7 @@ import Home from './pages/home';
 import Register from './pages/register';
 import AddPublication from './pages/add-publication';
 import Profile from './pages/profile';
+import Notifications from './pages/notifications';
 
 function App() {
 
@@ -26,6 +26,9 @@ function App() {
   return (
     <Router history={history}>
 		<Switch>
+			<Route path='/notifications'>
+				<Notifications />
+			</Route>
 			<Route path="/profile">
 				<Profile />
 			</Route>

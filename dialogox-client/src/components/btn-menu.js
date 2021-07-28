@@ -54,8 +54,9 @@ class ModalMenu extends Component{
 					</div>
 					<div className="menu">
 						<ul>
-							<li><Link className="link-menu" to="/home">Home</Link></li>
-							<li><Link className="link-menu" to="/profile">Profile</Link></li>
+							<li><Link className="link-menu" to="/home">Inicio</Link></li>
+							<li><Link className="link-menu" to="/profile">Perfil</Link></li>
+							<li><Link className="link-menu" to="/notifications">Notificaciones</Link></li>
 							<li><Link className="link-menu" to="/" onClick={this._handleCloseSesion}>Cerrar Sesión</Link></li>
 						</ul>
 					</div>
