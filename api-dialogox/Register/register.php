@@ -30,8 +30,15 @@ if(isset($_GET['user']) && isset($_GET['pass'])
 				  VALUES('$user','$name','$hash',now(),'')";
 
 		$result = $con->createQuery($query);
-				
+		
+		$idUsuario = mysqli_insert_id($con->con);
+
 		if($result){
+			$query2 = "INSERT INTO perfiles (UsuarioId, Telefono, Imagen ) 
+						VALUES ($idUsuario,'','')"; 
+		
+			$result2 = $con->createQuery($query2);
+		
 			$arr = [
 				"code" => "10"
 			];

@@ -2,7 +2,7 @@
 
 class Connection{
 
-	private $con;
+	public $con;
 	private $dbhost = "localhost";
 	private $dbuser = "root";
 	private $dbpass = "";
