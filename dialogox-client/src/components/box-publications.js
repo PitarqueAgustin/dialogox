@@ -13,11 +13,15 @@ import { API } from '../api-routes/routes';
 class BoxPublications extends Component{
 	
 	state ={
-		data: []
+		data: [],
+		all: false
 	}
 	
 	async componentDidMount(){
-		await axios.get(API.Publications.getAll)
+		
+		const { all } = this.state;
+		
+		await axios.get(API.Publications.getAll+'?all='+all)
 		.then(response =>{
 			this.setState({
 				data: response.data
@@ -27,9 +31,25 @@ class BoxPublications extends Component{
 		.catch(err => console.error(err))
 	}
 	
+	_handlerLimitPublications = async()=>{
+
+		const allChanged = !this.state.all;
+		
+		await axios.get(API.Publications.getAll+'?all='+allChanged)
+		.then(response =>{
+			this.setState({
+				data: response.data,
+				all: allChanged
+			})
+			console.log(this.state.data)
+		})
+		.catch(err => console.error(err))	
+		
+	}
+	
 	render(){
 		
-		const { data, profile } = this.state;
+		const { data, all } = this.state;
 		
 		return(
 			<div className="container row-gap">
@@ -46,6 +66,7 @@ class BoxPublications extends Component{
 						image={item.ImageProfile}
 					/>
 				))}
+				<a className="link text-center" onClick={this._handlerLimitPublications}>{all? 'Ver menos' : 'Ver más'}</a>
 			</div>
 		);
 	}

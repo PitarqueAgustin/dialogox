@@ -7,6 +7,20 @@ $con = new Connection();
 
 $con->getConnection();
 
+$all = "";
+
+$limit = " LIMIT 10";
+	
+
+if(isset($_GET["all"])){
+
+	$all = $_GET["all"];
+}
+
+if($all == "true"){
+	$limit = "";
+}
+
 $query = "SELECT 
 			PU.Id,
 			PU.UsuarioId,
@@ -18,7 +32,8 @@ $query = "SELECT
 			U.Nombre AS UserName
 		FROM publicaciones PU INNER JOIN usuarios U ON PU.UsuarioId = U.Id
 			INNER JOIN perfiles PR ON PR.UsuarioId = U.Id
-		ORDER BY Fecha DESC";
+		ORDER BY Fecha DESC
+		$limit";
 
 $result = $con->createQuery($query);
 
