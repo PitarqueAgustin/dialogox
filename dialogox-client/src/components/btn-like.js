@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fa';
 
 //Api-Routes
-import { API } from '../api-routes/routes';
+import { API } from '../helper/routes';
 
 const token = window.localStorage.getItem('token');
 

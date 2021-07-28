@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 //Api-Routes
-import { API } from '../api-routes/routes';
+import { API } from '../helper/routes';
 
 
 class FormRegister extends Component{

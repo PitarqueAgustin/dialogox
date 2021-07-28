@@ -4,33 +4,20 @@ import React,{ useEffect } from 'react';
 //Styles
 import '../css/navbar.css';
 
-//Axios
-import axios from 'axios';
-
 //Components
 import Navbar from '../components/navbar';
 import Publications from '../components/box-publications';
 import BtnAddPublication from '../components/btn-add-publication';
 
-import { API } from '../api-routes/routes';
+//VerifyToken
+import { verifyToken } from '../helper/verify';
+
 
 export default function Home(){
-		
-	const token = window.localStorage.getItem('token');	
-			
-	
+					
 	useEffect(() => {
-		_verifyToken();
+		verifyToken();
 	});
-
-	function _verifyToken(){
-		 axios.get(API.Login.auth+'?token='+token)
-			.then(response => {
-				if(response.data.code != '10')
-					window.location = '/';
-			})
-			.catch(err => console.error(err))		
-	}
 
 	return(
 		<div>

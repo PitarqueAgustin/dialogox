@@ -8,7 +8,7 @@ import axios from 'axios';
 import Publication from './publication';
 
 //Api-Routes
-import { API } from '../api-routes/routes';
+import { API } from '../helper/routes';
 
 class BoxPublications extends Component{
 	

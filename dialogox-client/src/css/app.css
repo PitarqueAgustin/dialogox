@@ -11,6 +11,11 @@ html{
 	background-color:#fff;
 }
 
+body > div{
+	overflow: hidden;
+	min-height: 100vh;
+}
+
 .container{
 	padding: 90px 20px 10px 20px;
 }
@@ -51,5 +56,3 @@ html{
 .link:hover{
 	color: blue;
 }
-
-

@@ -1,9 +1,19 @@
+//React
+import React, { useEffect } from 'react';
+
 //Components
 import FormAddPublication from '../components/form-add-publication';
 import Navbar from '../components/navbar';
 
+//VerifyToken
+import { verifyToken } from '../helper/verify';
 
 export default function AddPublication(){
+	
+	useEffect(() => {
+		verifyToken();
+	});
+	
 	return(
 		<div>
 			<Navbar />

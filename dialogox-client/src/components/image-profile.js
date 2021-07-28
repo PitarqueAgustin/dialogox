@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 //Api-Routes
-import { API } from '../api-routes/routes';
+import { API } from '../helper/routes';
 
 const token = window.localStorage.getItem('token');
 

@@ -11,7 +11,7 @@ import {
 
 
 //Api-Routes
-import { API } from '../api-routes/routes';
+import { API } from '../helper/routes';
 
 const token = window.localStorage.getItem('token');
 

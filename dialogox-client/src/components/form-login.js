@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 //Api-Routes
-import { API } from '../api-routes/routes';
+import { API } from '../helper/routes';
 
 const storage = window.localStorage;
 
@@ -21,7 +21,7 @@ class FormLogin extends Component{
 		autocomplete: 'on'
 	}
 	
-	_handleSubmit = async(e)=>{
+	_handleSubmit = (e)=>{
 		this.setState({
 			user: this.state.user,
 			pass: this.state.pass,
@@ -31,7 +31,7 @@ class FormLogin extends Component{
 		
 		const { user,pass } = this.state
 	
-		await axios.get(API.Login.login+'?user='+user+'&pass='+pass)
+		 axios.get(API.Login.login+'?user='+user+'&pass='+pass)
 			.then(response => {
 				if(response.data.code == '10'){
 					storage.setItem('token',response.data.token);
