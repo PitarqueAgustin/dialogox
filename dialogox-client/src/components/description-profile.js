@@ -7,17 +7,17 @@ import axios from 'axios';
 //Api-Routes
 import { API } from '../helper/routes';
 
-const token = window.localStorage.getItem('token');
-
 class DescriptionProfile extends Component{
 	
 	state={
 		data: []
 	}
 	
-	componentDidMount = ()=>{
+	componentDidMount = async ()=>{
 		
-		axios.get(API.Profile.data+'?token='+token)
+		const token = window.localStorage.getItem('token');
+		
+		await axios.get(API.Profile.data+'?token='+token)
 			.then(response =>{
 				this.setState({
 					data: response.data

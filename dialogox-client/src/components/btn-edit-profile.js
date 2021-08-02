@@ -79,11 +79,11 @@ class BtnEditProfile extends Component{
 					<form onSubmit={this._handleSubmit}>
 						<div>
 							<label>Url Imágen</label>
-							<input id="url-image" autocomplete="off" />
+							<input id="url-image" autoComplete="off" />
 						</div>
 						<div>
 							<label>Teléfono</label>
-							<input id="phone" autocomplete="off" />
+							<input id="phone" autoComplete="off" />
 						</div>
 						<div>
 							<button>Guardar</button>

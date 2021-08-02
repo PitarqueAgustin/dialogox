@@ -10,8 +10,6 @@ import axios from 'axios';
 //Api-Routes
 import { API } from '../helper/routes';
 
-const token = window.localStorage.getItem('token');
-
 class Notifications extends Component{
 
 	state={
@@ -19,6 +17,8 @@ class Notifications extends Component{
 	}
 	
 	componentDidMount = ()=>{
+		
+		const token = window.localStorage.getItem('token');
 		
 		axios.get(API.Notifications.getForToken+'?token='+token)
 			.then(response =>{

@@ -6,7 +6,8 @@ import './css/app.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  HashRouter
 } from 'react-router-dom';
 
 import { createHashHistory } from 'history';
@@ -25,26 +26,28 @@ function App() {
 	
   return (
     <Router history={history}>
-		<Switch>
-			<Route path='/notifications'>
-				<Notifications />
-			</Route>
-			<Route path="/profile">
-				<Profile />
-			</Route>
-			<Route path="/add-publication">
-				<AddPublication />
-			</Route>
-			<Route path='/home'>
-				<Home />
-			</Route>
-			<Route path='/register'>
-				<Register />
-			</Route>
-			<Route exact path='/'>
-				<Login />
-			</Route>
-		</Switch>
+		<HashRouter>
+			<Switch>
+				<Route path='/notifications'>
+					<Notifications />
+				</Route>
+				<Route path="/profile">
+					<Profile />
+				</Route>
+				<Route path="/add-publication">
+					<AddPublication />
+				</Route>
+				<Route path='/home'>
+					<Home />
+				</Route>
+				<Route path='/register'>
+					<Register />
+				</Route>
+				<Route exact path='/'>
+					<Login />
+				</Route>
+			</Switch>
+		</HashRouter>
 	</Router>
   );
 }

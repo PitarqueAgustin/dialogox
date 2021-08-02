@@ -35,7 +35,7 @@ class FormLogin extends Component{
 			.then(response => {
 				if(response.data.code == '10'){
 					storage.setItem('token',response.data.token);
-					window.location = '/home';
+					window.location = '/#/home';
 				}
 				
 				if(response.data.code == '99'){
@@ -87,7 +87,7 @@ class FormLogin extends Component{
 			<form onSubmit={this._handleSubmit} className="form">
 				<div className="form-row">
 					<label htmlFor="user">Email</label>
-					<input id="user" className="form-input" onChange={this._handleUser} autocomplete={autocomplete}/>
+					<input id="user" className="form-input" onChange={this._handleUser} autoComplete={autocomplete}/>
 				</div>
 				<div className="form-row">
 					<div>
