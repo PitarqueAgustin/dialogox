@@ -3,6 +3,8 @@
 require_once("../connection.php");
 require_once("../requestHeader.php");
 
+date_default_timezone_set('America/Buenos_Aires');
+
 $con = new Connection();
 
 $con->getConnection();
