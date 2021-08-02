@@ -7,8 +7,6 @@ import axios from 'axios';
 //Api-Routes
 import { API } from '../helper/routes';
 
-const token = window.localStorage.getItem('token');
-
 class FormAddPublication extends Component{
 	
 	state={
@@ -24,6 +22,8 @@ class FormAddPublication extends Component{
 	
 	_handleSubmit = async(e)=>{
 		e.preventDefault();
+		
+		const token = window.localStorage.getItem('token');
 		
 		const { title, description, imageURL} = this.state;
 		

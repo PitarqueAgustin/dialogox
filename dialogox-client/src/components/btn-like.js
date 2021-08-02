@@ -12,8 +12,6 @@ import {
 //Api-Routes
 import { API } from '../helper/routes';
 
-const token = window.localStorage.getItem('token');
-
 class BtnLike extends Component{
 	
 	constructor(props){
@@ -29,6 +27,9 @@ class BtnLike extends Component{
 	}
 	
 	_getState = async()=>{
+		
+		const token = window.localStorage.getItem('token');
+		
 		await axios.get(API.Publications.like+'?get=0&token='+token+'&publicationid='+this.props.id)
 			.then(response => {
 				if(response.data.Result == 'Ok'){
@@ -48,6 +49,8 @@ class BtnLike extends Component{
 	}
 	
 	_handleLike = async()=>{
+		
+		const token = window.localStorage.getItem('token');
 		
 		const {state} = this.state;
 		
